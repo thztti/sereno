@@ -5,10 +5,14 @@ chrome.tabs.onUpdated.addListener( function ( tabId, changeInfo, tab ) {
 			"selector": "#boxComentarios"
 		},
 		1: {
+			"domain": "noticias.band",
+			"selector": "#disqus_thread"
+		},
+		2: {
 			"domain": "abril.com.br",
 			"selector": "#comments"
 		},
-		2: {
+		3: {
 			"domain": "otempo.com.br",
 			"selector": "#comments"
 		},
@@ -16,15 +20,15 @@ chrome.tabs.onUpdated.addListener( function ( tabId, changeInfo, tab ) {
 			"domain": "uol.com.br",
 			"selector": "#comentarios"
 		},
-		3: {
+		5: {
 			"domain": "folha.uol",
 			"selector": "#article-comments"
 		},
-		5: {
+		6: {
 			"domain": "bbc.com",
 			"selector": "#story-footer"
 		},
-		6: {
+		7: {
 			"domain": "terra.com.br",
 			"selector": "#fb-social-comments"
 		}
