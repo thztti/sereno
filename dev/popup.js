@@ -17,25 +17,29 @@ chrome.tabs.onUpdated.addListener( function ( tabId, changeInfo, tab ) {
 			"selector": "#comments"
 		},
 		4: {
+			"domain": "redetv.uol.com.br",
+			"selector": ".comentarios"
+		},
+		5: {
 			"domain": "uol.com.br",
 			"selector": "#comentarios"
 		},
-		5: {
+		6: {
 			"domain": "folha.uol",
 			"selector": "#article-comments"
 		},
-		6: {
+		7: {
 			"domain": "bbc.com",
 			"selector": "#story-footer"
 		},
-		7: {
+		8: {
 			"domain": "terra.com.br",
 			"selector": "#fb-social-comments"
 		},
-		8: {
+		9: {
 			"domain": "estadao.com.br",
 			"selector": ".comentarios"
-		}
+		},
 	}
 
 	const hideComments = domain => {
