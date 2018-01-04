@@ -1,8 +1,9 @@
 
 {
   "name": "Sereno",
-  "description": "Sereno makes sure you're reading stories you care about most. Haters-free.",
+  "description": "Navegue sem ver os comentários nos maiores portais brasileiros de notícias como Globo.com, Veja, Exame, UOL, Folha e Estadão.",
   "version": "0.1",
+  "homepage_url": "http://sereno.news",
   "permissions": [
     "activeTab",
     "*://*/*"
