@@ -10,7 +10,7 @@ chrome.tabs.onUpdated.addListener( function (tabId, changeInfo, tab) {
 		1:
 		{
 			"domain": "abril.com.br",
-			"selector": "comments "
+			"selector": "comments"
 		},
 		2:
 		{
