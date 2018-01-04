@@ -5,37 +5,37 @@ chrome.tabs.onUpdated.addListener( function (tabId, changeInfo, tab) {
 		0:
 		{
 			"domain": "globo.com",
-			"selector": "boxComentarios"
+			"selector": "#boxComentarios"
 		},
 		1:
 		{
 			"domain": "abril.com.br",
-			"selector": "comments"
+			"selector": "#comments"
 		},
 		2:
 		{
 			"domain": "otempo.com.br",
-			"selector": "comments"
+			"selector": "#comments"
 		},
 		4:
 		{
 			"domain": "uol.com.br",
-			"selector": "comentarios"
+			"selector": "#comentarios"
 		},
 		3:
 		{
 			"domain": "folha.uol",
-			"selector": "article-comments"
+			"selector": "#article-comments"
 		},
 		5:
 		{
 			"domain": "bbc.com",
-			"selector": "story-footer"
+			"selector": "#story-footer"
 		},
 		5:
 		{
 			"domain": "terra.com.br",
-			"selector": "fb-social-comments"
+			"selector": "#fb-social-comments"
 		}
 	}
   console.log(sites);
@@ -45,7 +45,7 @@ chrome.tabs.onUpdated.addListener( function (tabId, changeInfo, tab) {
   		
   		//switch to arrow functions :/
 	    function hideComments(y){
-	    	var x = "document.getElementById('"+y+"').style.display = 'none'";
+	    	var x = "document.querySelector('"+y+"').style.display = 'none'";
 	  		chrome.tabs.executeScript({
 		      code: x
 		    });
