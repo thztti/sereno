@@ -5,8 +5,7 @@
   "version": "0.1",
   "permissions": [
     "activeTab",
-    "http://*/",
-    "https://*/"
+    "*://*/*"
   ],
   "background": {
     "scripts": ["popup.js"],
