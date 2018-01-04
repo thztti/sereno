@@ -31,6 +31,10 @@ chrome.tabs.onUpdated.addListener( function ( tabId, changeInfo, tab ) {
 		7: {
 			"domain": "terra.com.br",
 			"selector": "#fb-social-comments"
+		},
+		8: {
+			"domain": "estadao.com.br",
+			"selector": ".comentarios"
 		}
 	}
 
