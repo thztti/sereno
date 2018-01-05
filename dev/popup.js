@@ -2,7 +2,7 @@ chrome.tabs.onUpdated.addListener( function ( tabId, changeInfo, tab ) {
 	sites = {
 		0: {
 			"domain": "globo.com",
-			"selector": ".comentarios, #boxComentarios"
+			"selector": "#boxComentarios"
 		},
 		1: {
 			"domain": "noticias.band",
@@ -10,7 +10,7 @@ chrome.tabs.onUpdated.addListener( function ( tabId, changeInfo, tab ) {
 		},
 		2: {
 			"domain": "abril.com.br",
-			"selector": "#comments"
+			"selector": ".comments"
 		},
 		3: {
 			"domain": "otempo.com.br",
@@ -42,11 +42,12 @@ chrome.tabs.onUpdated.addListener( function ( tabId, changeInfo, tab ) {
 		}
 	}
 
-	const quote = '<div class="sereno sr-container-quote"><style scoped>.sr-container-quote{margin:20px 0;color:black}.sr-element-paragraph-quote{font-size:20px;width:680px;font-family:Georgia;line-height:25px;overflow:hidden;display:inline-block;padding-left:20px;border-left:10px solid black}.sr-element-footer{display:block;font-size:12px;font-family:Arial;margin-left:30px}a{color:black}</style><span class="sr-element-paragraph-quote">"Agir, eis a inteligência verdadeira. Serei o que quiser. Mas tenho que querer o que for. O êxito está em ter êxito, e não em ter condições de êxito. Condições de palácio tem qualquer terra larga, mas onde estará o palácio se não o fizerem ali?" – Roberto Shinyashiki</span><span class="sr-element-footer">Apresentado por <a href="http://sereno.news" target="_blank">Sereno</a></span></div>';
+	
 
-	const hideComments = domain => {
+	const hideComments = selector => {
 		// let script = "document.querySelector('" + domain + "').style.display = 'none'";
-		let script = "document.querySelector('" + domain + "').innerHTML = '" + quote + "'";
+		// let script = "document.querySelector('" + selector + "').innerHTML = '" + quote + "'";
+		let script = "var select = document.querySelector('" + selector + "');var quote = document.createElement('div');quote.innerHTML = '<div class=\"sereno sr-container-quote\"><style scoped>.sr-container-quote{margin:20px 0;color:black}.sr-element-paragraph-quote{font-size:20px;width:680px;font-family:Georgia;line-height:25px;overflow:hidden;display:inline-block;padding-left:20px;border-left:5px solid black}.sr-element-footer{display:block;font-size:12px;font-family:Arial;margin-left:30px}a{color:black}</style><span class=\"sr-element-paragraph-quote\">\"Agir, eis a inteligência verdadeira. Serei o que quiser. Mas tenho que querer o que for. O êxito está em ter êxito, e não em ter condições de êxito. Condições de palácio tem qualquer terra larga, mas onde estará o palácio se não o fizerem ali?\" – Roberto Shinyashiki</span><span class=\"sr-element-footer\">Apresentado por <a href=\"http://sereno.news\" target=\"_blank\">Sereno</a></span></div>';select.parentNode.replaceChild(quote, select);";
 		console.log(script)
 		chrome.tabs.executeScript({
 			code: script
