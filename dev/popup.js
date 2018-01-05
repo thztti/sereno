@@ -2,7 +2,7 @@ chrome.tabs.onUpdated.addListener( function ( tabId, changeInfo, tab ) {
 	sites = {
 		0: {
 			"domain": "globo.com",
-			"selector": "#boxComentarios"
+			"selector": ".comentarios, #boxComentarios"
 		},
 		1: {
 			"domain": "noticias.band",
@@ -22,7 +22,7 @@ chrome.tabs.onUpdated.addListener( function ( tabId, changeInfo, tab ) {
 		},
 		5: {
 			"domain": "uol.com.br",
-			"selector": "#comentarios"
+			"selector": "#comentarios, .comments"
 		},
 		6: {
 			"domain": "folha.uol",
@@ -39,7 +39,7 @@ chrome.tabs.onUpdated.addListener( function ( tabId, changeInfo, tab ) {
 		9: {
 			"domain": "estadao.com.br",
 			"selector": ".comentarios"
-		},
+		}
 	}
 
 	const hideComments = domain => {

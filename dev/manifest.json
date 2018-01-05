@@ -2,7 +2,7 @@
 {
   "name": "Sereno News",
   "description": "Navegue sem ver os comentários nos maiores portais brasileiros de notícias como Globo.com, Veja, Exame, UOL, Folha e Estadão.",
-  "version": "0.1",
+  "version": "0.2",
   "homepage_url": "http://sereno.news",
   "permissions": [
     "activeTab",
