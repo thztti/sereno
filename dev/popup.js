@@ -1,5 +1,5 @@
 chrome.tabs.onUpdated.addListener( function ( tabId, changeInfo, tab ) {
-	sites = {
+	const sites = {
 		0: {
 			"domain": "globo.com",
 			"selector": "#boxComentarios"
